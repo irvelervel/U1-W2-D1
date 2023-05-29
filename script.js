@@ -37,3 +37,46 @@ canYouDrive = false
 
 // una variabile SI DICHIARA UNA VOLTA SOLA!
 // ma una variabile può venire assegnata/riassegnata n volte!
+
+// ESEMPI DI VARIABILI NUMERICHE
+let number1 = 15
+let number2 = 20
+let number3 = number1 + number2
+
+// number3 è 35??
+console.log('controllo il number3', number3) // sì :)
+console.log('number2', number2)
+
+number1 = number1 + number2
+console.log('number1', number1) // ? 35
+number1 = number1 - number3 // ? 0
+console.log('alla fine delle operazioni, number1', number1)
+
+console.log(3 * 5) // moltiplicazione
+console.log(20 / 4) // divisione
+console.log(22 % 5) // modulo (resto della divisione) --> 2 (farebbe 4 con il resto di 2)
+// module operator
+
+let falseNumber1 = '15' // !WARNING! è una stringa!!
+let falseNumber2 = '20'
+console.log('SOMMA TRA FALSENUMBERS', falseNumber1 + falseNumber2) // ??? '1520'
+// stesso risultato anche se falseNumber2 fosse un numero
+
+let firstName = 'Stefano'
+let lastName = 'Casasola'
+let fullName = firstName + ' ' + lastName
+console.log('fullName', fullName)
+// alert(fullName) // <-- fa comparire un popup che dev'essere chiuso dall'utente!
+
+// console.log(myName) // <-- errore! non posso accedere ad una variabile PRIMA della sua dichiarazione
+let myName = 'Stefano'
+
+const fixedNumber = 50
+// fixedNumber = 100 // <-- ERRORE! è una costante, non potrà mai cambiare valore
+
+// le costanti sono comode per memorizzare valori che non nascono per essere cambiati nel corso del tempo,
+// ma più che altro per evitarmi di riscrivere magari stringhe complicate a mano...
+const epicodeURL = 'https://www.epicode.com'
+
+// i valori booleani sono comuni nella valutazione di espressioni o controlli di veridicità
+console.log(fixedNumber > 60)
