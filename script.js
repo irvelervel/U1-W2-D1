@@ -79,4 +79,82 @@ const fixedNumber = 50
 const epicodeURL = 'https://www.epicode.com'
 
 // i valori booleani sono comuni nella valutazione di espressioni o controlli di veridicità
-console.log(fixedNumber > 60)
+console.log(fixedNumber > 60) // false
+
+let myVariable
+console.log('myVariable', myVariable) // undefined, non è mai stato definito il valore di myVariable
+
+let anotherVariable = null
+console.log('anotherVariable', anotherVariable) // null, l'assenza di valore!
+
+console.log(100 + myVariable) // NaN, not a number
+// console.log(Array(16).join('wat' - 1) + ' Batman!') // sigla di Batman :)
+
+let myDog = 'Pluto'
+let myNumber = 50
+
+myNumber += 10 // myNumber = myNumber + 10, si addiziona 10 a se stesso
+console.log('myNumber', myNumber) // ? myNumber += 10 è uguale a dire myNumber = myNumber + 10
+
+// VERIFICHIAMO LE CONDIZIONI
+let num1 = 5
+let num2 = 10
+let num3 = 10
+
+console.log(num1 < num2) // true
+console.log(num2 <= num3) // true
+
+console.log(num2 === num3) // true, === è un operatore di UGUAGLIANZA
+
+// il == controlla che due valori siano solamente uguali per VALORE
+// il === controlla che due valori siano uguali per VALORE E PER TIPO
+
+console.log(10 == '10') // true :(
+console.log(10 === '10') // false :)
+
+let name1 = 'Stefano' // = è assegnazione
+let name2 = 'Stefano' // = è assegnazione
+
+// variabile <-- valore
+let nameResult = name1 === name2
+console.log('nameResult', nameResult)
+
+// operatore AND &&
+// operatore OR ||
+// operatore NOT !
+
+console.log(55 > 45 && 150 > 55) // tutta questa riga, sarà TRUE se tutti le sue condizioni sono TRUE
+// l'unica situazione in cui varie condizioni legate via AND && sia true è che TUTTE le sue condizioni siano TRUE
+
+console.log(55 > 45 && 150 < 55) // false
+
+// true && true --> true
+// true && false --> false
+// false && true --> false
+// false && false --> false
+
+console.log(55 > 45 || 150 > 55) // questa riga sarà TRUE se anche solamente UNA delle sue condizioni è TRUE
+
+console.log(55 > 45 || 150 < 55) // true
+// true || true --> true
+// true || false --> true
+// false || true --> true
+// false || false --> false
+
+let shouldBeTrue = 55 > 45 // true
+console.log('shouldBeTrue', shouldBeTrue)
+console.log(!shouldBeTrue) // false, inverto il valore con l'operatore NOT (!)
+
+// typeof
+console.log(typeof shouldBeTrue) // boolean
+
+let a = 50
+console.log(a === a) // true, verifico che a sia uguale ad a
+console.log(a !== a) // false, verifico che a sia diverso da a
+
+console.log(10 != '10') // false
+console.log(10 !== '10') // true
+
+// TERNARY OPERATOR (extra)
+const myAge = 17
+let canIDrive = myAge > 18 ? true : false // ternary operator, in questo la condizione fallisce e quindi canIDrive diventa false
